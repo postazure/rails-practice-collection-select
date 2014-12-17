@@ -1,4 +1,5 @@
 class Location < ActiveRecord::Base
   has_many :employments
-  has_many :organizations, :people, through: :employments
+  has_many :organizations, through: :employments
+  has_many :people, through: :employments
 end
